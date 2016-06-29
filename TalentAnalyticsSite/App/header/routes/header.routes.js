@@ -1,7 +1,7 @@
 ﻿'use strict';
 
 // Setting up route
-angular.module('extrovertApp').config(['$stateProvider', '$urlRouterProvider',
+angular.module('header').config(['$stateProvider', '$urlRouterProvider',
   function ($stateProvider, $urlRouterProvider) {
 
       // Redirect to 404 when route not found
@@ -12,10 +12,10 @@ angular.module('extrovertApp').config(['$stateProvider', '$urlRouterProvider',
       });*/
 
       //Set a redirect for root path
-      $urlRouterProvider.when('', '/');
+     // $urlRouterProvider.when('', '/');
 
       $urlRouterProvider
-        .otherwise('/employeeform')
+        .otherwise('/reviwerconsole')
 
       //core level routings
       $stateProvider
@@ -114,15 +114,20 @@ angular.module('extrovertApp').config(['$stateProvider', '$urlRouterProvider',
           }
       })
 
-      .state("employeeform", {
-          url: "/employeeform",
-          parent: 'parent',
-          templateUrl: 'app/employee-form/views/employeeForm.html'
-      })
+        .state("employeeform", {
+            url: "/employeeform",
+            parent: 'parent',
+            templateUrl: 'App/employee-form/views/employeeForm.html'
+        })
+          .state("reviwerconsole", {
+              url: "/reviwerconsole",
+              parent: 'parent',
+              templateUrl: 'App/reviewer-console/views/reviewerConsole.html'
+          })
         .state("reviewerform", {
             url: "/reviewerform",
             parent: 'parent',
-            templateUrl: 'app/reviwer-form/views/reviewerForm.html'
+            templateUrl: 'App/reviwer-form/views/reviewerForm.html'
         })
 
       //Route for the site home

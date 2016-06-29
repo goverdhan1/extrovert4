@@ -31,6 +31,9 @@ angular.module('header').controller('headerController', ['$scope', '$stateParams
                 if (args == 'employeeform') {
                     $scope.moduleName = 'EMPLOYEE FORM';
                 }
+                else if (args == 'reviewerConsole') {
+                    $scope.moduleName = 'REVIEWER CONSOLE';
+                }
                 else if (args == 'reviewerform') {
                     $scope.moduleName = 'REVIEWER FORM';
                 }

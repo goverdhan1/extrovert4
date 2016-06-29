@@ -15,7 +15,7 @@ angular.module('header').config(['$stateProvider', '$urlRouterProvider',
      // $urlRouterProvider.when('', '/');
 
       $urlRouterProvider
-        .otherwise('/reviwerconsole')
+        .otherwise('/employeeform')
 
       //core level routings
       $stateProvider

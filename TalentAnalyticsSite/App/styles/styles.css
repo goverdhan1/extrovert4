@@ -1,0 +1,28 @@
+.home-div{
+  padding-left: 20px;
+}
+
+.options-ul{  
+  list-style-type: none;
+}
+
+.li_style{
+  margin: 3px;
+}
+
+.required-astriek{
+  color: red;
+  font-size: 16px;
+}
+
+.text-input-min-size{
+  width: 250px;
+}
+
+.required-message{
+  color: red;
+}
+
+.delete-span{
+  cursor: pointer;
+}

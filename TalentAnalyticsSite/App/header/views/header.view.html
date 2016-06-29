@@ -1,0 +1,61 @@
+﻿<div id="wrapper" align="center">
+    <toaster-container></toaster-container>
+    <div ng-controller="headerController">
+        <header>
+            <div ng-init="loadData()" ng-click="headerSettingPopClose()">
+                <div id="todHeader" class="todHeader">
+                    <div class="dnetHeader">
+                        <a ng-href="{{deloitteNet}}" class="TCH_DNETLinks" target="_blank">
+                            <div class="logo" title="Go to Deloittenet"></div>
+                        </a><!-- My Setting Pane Starting -->
+                        <nav class="nav-bar">
+                            <div class="nb-menu topNavProfile" data-toggle="" id="dpnDiv" title="DPN Profile for ">
+                                <a href ng-click="redirect(UserDpnNetURL)" target="_blank" class="TCH_DNETDPNLinks">
+                                    <div class="dpnlogo"></div><span class="txt">Your Profile </span>
+                                </a>
+                            </div>
+                            <div class="nb-menu " data-toggle="" title="Access my Email" id="TCH_DNETMail">
+                                <a ng-href="{{accessEmailURL}}" target="_blank" class="TCH_DNETMailLinks">
+                                    <i class="fa fa-envelope fa-2x"></i><span class="txt">Access my Email </span>
+                                </a>
+                            </div>
+                            <div tabindex="0" class="nb-menu topNavSetting" title="User Settings" ng-class="{headerActiveIcons:headerPopupClose}">
+                                <i class="fa fa-cog fa-2x"></i>
+                                <div class="nb-sub-menu" style="display:block">
+                                    <div>
+                                        <a href ng-click="redirect(myInformationLink)" target="_blank" class="todDNETLinks"><i class="fa fa-info fa-1x"></i><span class="txt">My Information</span></a>
+                                    </div>
+                                    <div><a ng-href="{{resetPassword}}" target="_blank" class="TCH_DNETPWDLinks"><i class="fa fa-key fa-1x"></i><span class="txt">Reset a Password</span></a></div><div>
+                                        <a ng-href="{{resetPin}}" target="_blank" class="TCH_DNETPINLinks">
+                                            <i class="fa fa-lock fa-1x"></i><span class="txt">Reset My Pin</span>
+                                        </a>
+                                    </div><div><a ng-href="{{reportVoilation}}" target="_blank" class="TCH_DNETLinks"><i class="fa fa-pencil fa-1x"></i><span class="txt">Report a Violation</span></a></div>
+                                </div>
+                            </div>
+                            <div class="nb-menu topNavLogOut" data-toggle="" id="logoutDiv" title="Logout  ">
+                                <a href="javascript:void(0)" ng-click='logout()' class="TCH_DNETLogOutLinks">
+                                    <i class="fa fa-sign-out fa-2x"></i><span class="txt">Log Out </span>
+                                </a>
+                            </div>
+
+                            <div class="nb-menu-logoHover" style="height:38px;">
+                                <span style="line-height:38px;">
+                                    &nbsp;Hello&nbsp; {{UserFName}} !
+                                </span>
+                            </div>
+                        </nav><!-- My Setting Pane Ending-->
+                    </div>
+                    <div class="todHeaderBar">
+                        <div class="todHeaderInner">                            
+                            <div class="logoText"><span class="logo-text2">EXTROVERT YOURSELF - {{moduleName}}</span></div>                            
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+    </div>
+
+
+    <section ui-view></section>
+</div>

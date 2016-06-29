@@ -1,0 +1,136 @@
+﻿
+<section id="container" ng-controller="DashboardController">    
+    <hcm-sub-header></hcm-sub-header>
+
+    <article id="contentright" ng-view=ng-view>
+        <div id="contentrightdiv" class="tab-content" ng-show="tab===1">
+            <div class="qVTilesCornerBgImg"></div>
+            <div id="empviewdiv">
+                <div class="empviewheading">
+                    <h1>Employee Quickview</h1>
+                </div>
+            </div>
+
+            <!--crightsearch starts-->
+            <emp-search class="searchComponent" results-per-page="8"></emp-search>
+
+            <div id="contentdown" ng-class="{hide :selectedEmployee}">
+                <!--contentdownpara starts-->
+                <div id="contentdownpara">
+                    <p>You can use Quickview to find information of any employee. Just enter any of the following information in the search field above:</p>
+                </div>
+                <!--contentdownpara ends-->
+                <!--contentlist starts-->
+                <div id="contentlist">
+                    <ul id="firstlist">
+                        <li>Employee Name</li>
+                        <li>Personnel Number</li>
+                        <li>Employee Email</li>
+                        <li>Personnel Subarea Desc</li>
+                        <li>Employee Service Line Desc</li>
+                        <li>Employee Service Area Desc</li>
+                    </ul>
+                    <ul id="secondlist">
+                        <li>Employee Region Desc</li>
+                        <li>Employee Costcenter (Key)</li>
+                        <li>Employee Cost Center Desc</li>
+                        <li>Cost Center Hierarchy Node Desc</li>
+                        <li>Primary Market Offering Desc</li>
+                        <li>Secondary Market Offering Desc</li>
+                    </ul>
+                    <!--contentlist ends-->
+                </div>
+                <!--contentdown ends-->
+            </div>
+            <!--contentrightdiv ends-->
+
+        </div>
+        <div class="tab-content" ng-show="tab===2" ng-controller="HeadcountLandingController">
+            <div class="qVTilesCornerBgImg"></div>
+            <div id="empviewdiv">
+                <span class="bluebar"></span>
+                <div class="empviewheading">
+                    <h1>Headcount Management</h1>
+                </div>
+                <!--tileview_rightside starts-->
+                <div class="col-xs-12">
+                    <div class="tileview_rightside headcountrighttab ">
+                        <div class="headCntMgnt_filterSet">
+                            <hcm-edit-save-selected-filter></hcm-edit-save-selected-filter>
+
+                        </div>
+                    </div>
+
+                    <a ui-sref="headcountdetailview({ selectedFilter: form.selectedFilter, reportTitle:lineChartHandler.chartScale })">
+                        <div class="headCntMgnt_fullView pull-left ">
+                            <div class="fullView">
+                                <i class="fa fa-arrows-alt"></i>
+                                <span>Detail View</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <div class="switch-btn switch-btn-summary right  i-or-e">
+                        <button ng-click="toggleChart('barchart');" ng-class="{'bg-cl-fff': lineChartHandler.barChart,'bg-cl-E5E5E5': lineChartHandler.lineChart}" class="left-btn"><i class="fa fa-bar-chart"></i></button>
+                        <button ng-click="toggleChart('linechart');" ng-class="{'bg-cl-fff': lineChartHandler.lineChart,'bg-cl-E5E5E5': lineChartHandler.barChart}" class="right-btn">
+                            <i class="fa fa-line-chart"></i>
+                        </button>
+                    </div>
+
+                </div>
+                <div style="clear:both"></div>
+            </div>
+            <hcm-landing-linechart chart-type="{{lineChartHandler.chartType}}" 
+                                   line-chart-grid-handler="lineChartGridHandler"
+                                   selected-filter={{form.selectedFilter}} 
+                                   selected-type={{form.selectedType}} 
+                                   render-chart="renderLineChart(filterName, selectedType)" 
+                                   update-chart="lineChartHandler" 
+                                   is-partial-period-message-show="isPartialPeriodMessageShow">
+            </hcm-landing-linechart>                            
+            <hcm-landing-linechart-grid handler="lineChartGridHandler" selected-filter={{form.selectedFilter}}></hcm-landing-linechart-grid>
+            <div class="partial-period-data-label" ng-if="isPartialPeriodMessageShow.grid">* Partial {{isPartialPeriodMessageShow.partialValues}} Data</div>
+            <!--<hcm-landing-export></hcm-landing-export>-->
+            <!--tileview_rightside ends-->
+        </div>
+        <div class="tab-content" ng-show="tab===3">
+            <div class="qVTilesCornerBgImg"></div>
+            <div id="empviewdiv">
+                <div class="empviewheading">
+                    <h1>Total Rewards</h1>
+                </div>
+                <!--tileview_rightside starts-->
+                <div class="tileview_rightside">
+                    <p>Deloitte's Total Rewards includes your compensation and a broad range of benefits covering retirement, health care, insurance, wellness, and more.</p>
+                    <!--<a track-navigation="Total Rewards- Bonus Reporting|home_page_links" ng-click="redirect(SOBSTalentLink)" href>Bonus Reporting<i class="fa fa-chevron-right"></i></a>-->
+                </div>
+                <!--tileview_rightside ends-->
+            </div>
+        </div>
+        <div class="tab-content" ng-show="tab===4">
+            <div class="qVTilesCornerBgImg"></div>
+            <div id="empviewdiv">
+                <div class="empviewheading"><h1>Ad hoc Reporting</h1></div>
+                <!--tileview_rightside starts-->
+                <div class="tileview_rightside">
+                    <p>In this section you will be able to request a custom report from the CTS Reporting and Analytics team.</p>
+                    <a track-navigation="Ad-hoc reporting- Intake Form|home_page_links" ng-click="redirect(IntakeFormLink)" href>Intake Form<i class="fa fa-chevron-right"></i></a>
+                </div>
+                <!--tileview_rightside ends-->
+            </div>
+        </div>
+        <div class="tab-content" ng-show="tab===5">
+            <div class="qVTilesCornerBgImg"></div>
+            <div id="empviewdiv">
+                <div class="empviewheading"><h1>Visualizations and Analytics</h1></div>
+                <!--tileview_rightside starts-->
+                <div class="tileview_rightside">
+                    <p>This section provides a link to the Tableau visualizations created for you by the Talent Reporting & Analytics team.</p>
+                </div>
+                <!--tileview_rightside ends-->
+            </div>
+        </div>
+    </article>
+    <!--article contentright ends-->
+</section>
+<!--section ends-->

@@ -74,7 +74,9 @@ angular.module('extrovertApp').controller('employeeFormCtrl', function ($scope, 
 			  HOURS_SPENT: getStringofArrayAttribute($scope.details.initiatives, 'timeSpent'), 	
 			  INITIATIVE_LEAD: getStringofArrayAttribute($scope.details.initiatives, 'leadName'),  	
 		  	  INITIATIVE_LEAD_EMAIL: getStringofArrayAttribute($scope.details.initiatives, 'leadEmail'),	  		  
-	  		  CONTRIBUTION_DETIALS: getStringofArrayAttribute($scope.details.initiatives, 'contributionDetails')		  
+		  	  CONTRIBUTION_DETIALS: getStringofArrayAttribute($scope.details.initiatives, 'contributionDetails'),
+		  	  DATEFROM: '01/01/2016',
+		  	  DATETO: '02/02/2016'
 			};
 
 		return postObj;			

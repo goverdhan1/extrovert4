@@ -4,11 +4,11 @@
             <h4>Personal Details <span class="required-astriek">*</span></h4>
             <section class="row">
                 <section class="col-md-3" class="form-group">
-                    <!-- Name *:  --><input name="personalName" placeholder="Name" class="form-control text-input-min-size" required ng-model="details.personalName"></input>
+                    <!-- Name *:  --><input name="personalName" placeholder="Name" class="form-control text-input-min-size" required ng-model="details.personalName"/>
                     <p ng-show="detailsForm.personalName.$invalid && !detailsForm.personalName.$pristine" class="required-message">Enter Personal name</p>
                 </section>
                 <section class="col-md-3" class="form-group">
-                    <!-- Email Id *:  --><input name="personalEmail" placeholder="Email Id" class="form-control text-input-min-size" required="true" ng-model="details.personalEmail" type="email"></input>
+                    <!-- Email Id *:  --><input name="personalEmail" placeholder="Email Id" class="form-control text-input-min-size" required="true" ng-model="details.personalEmail" type="email" />
                     <p ng-show="detailsForm.personalEmail.$invalid && !detailsForm.personalEmail.$pristine" class="required-message">Enter valid Personal email</p>
                 </section>
             </section>
@@ -66,6 +66,8 @@
                         <th>Initiative Type</th>
                         <th>Name Of Initiative</th>
                         <th>Time Spent</th>
+                        <th>Date From</th>
+                        <th>Date To</th>
                         <th>Initiative Lead Name</th>
                         <th>Initiative Lead Email</th>
                         <th>Contribution Details</th>
@@ -83,6 +85,26 @@
                         <td>
                             <input type="number" class="form-control col-sm-2" ng-model="initiative.timeSpent"></input>
                         </td>
+                        <td>
+                            <div class="input-append">
+                                <input id="date-picker-2"
+                                       type="text"
+                                       placeholder="Select Date"
+                                       class="pull-left date-picker"
+                                       ng-model="initiative.startDate" />
+                                <label for="date-picker-2" class="add-on">
+                                    <i class="icon-calendar"></i>
+                                </label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="input-append">
+                                <input id="date-picker-3" type="text" class="pull-left date-picker" placeholder="Select Date" ng-model="initiative.endDate" />
+                                <label for="date-picker-3" class="add-on">
+                                    <i class="icon-calendar"></i>
+                                </label>
+                            </div>
+                        </td> 
                         <td>
                             <input type="text" class="form-control col-sm-2" ng-model="initiative.leadName"></input>
                         </td>
@@ -102,7 +124,7 @@
             <button class="btn btn-primary" ng-click="addInitiative()">Add Row</button>
 </section>
         <section class="text-center savebutton">
-            <button style="margin-right: 20px" class="btn btn-primary btn-lg active">Save</button>
+            <!--<button style="margin-right: 20px" class="btn btn-primary btn-lg active">Save</button>-->
             <button ng-click="onSubmit()" class="btn btn-secondary btn-lg active" role="button">Submit</button>
         </section>
     </form>

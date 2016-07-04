@@ -35,7 +35,11 @@ namespace Deloitte.TOD.TalentAnalyticsSite
            ));
 
             bundles.Add(new StyleBundle("~/bundles/vendorstyles").Include(
-                "~/App/core/styles/bootstrap.min.css"                
+                "~/Content/styles/bootstrap.css",
+                "~/Content/styles/font-awesome.min.css",
+                "~/Content/styles/jquery-ui.css",
+                "~/Content/styles/datepicker.css",
+                "~/Content/styles/toaster.css"
             ));
             bundles.Add(new StyleBundle("~/bundles/allpageStyles").Include(
              "~/App/header/styles/header.min.css",

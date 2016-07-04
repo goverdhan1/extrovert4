@@ -214,7 +214,6 @@
     <Content Include="App\core\services\testhanaconnection.service.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="App\core\styles\bootstrap.min.css" />
     <Content Include="App\core\styles\common.css">
       <DependentUpon>common.less</DependentUpon>
     </Content>
@@ -273,10 +272,12 @@
     <Content Include="App\tatypeahead\module.js" />
     <Content Include="App\tatypeahead\services\tatypeahead.position.factory.js" />
     <Content Include="App\tatypeahead\views\tatypeahead.views.js" />
-    <Content Include="Content\toaster.css" />
-    <Content Include="Content\toaster.min.css" />
-    <Content Include="css\bootstrap.css" />
-    <Content Include="css\bootstrap.min.css" />
+    <Content Include="Content\datepicker.css" />
+    <Content Include="Content\styles\bootstrap.css" />
+    <Content Include="Content\styles\datepicker.css" />
+    <Content Include="Content\styles\font-awesome.min.css" />
+    <Content Include="Content\styles\jquery-ui.css" />
+    <Content Include="Content\styles\toaster.css" />
     <Content Include="css\empQV.css" />
     <Content Include="css\fa-font-awesome.css" />
     <Content Include="css\flaticon.css" />
@@ -1938,7 +1939,6 @@
     <Content Include="Scripts\angular-ui-router.min.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Content\toaster.scss" />
     <Content Include="fonts\BoldItalic\OpenSans-BoldItalic.eot" />
     <Content Include="fonts\BoldItalic\OpenSans-BoldItalic.ttf" />
     <Content Include="fonts\BoldItalic\OpenSans-BoldItalic.woff" />
@@ -2001,7 +2001,6 @@
     <Content Include="less\empQV.less" />
     <Content Include="less\styleDash.css.map" />
     <Content Include="less\styleDash.less" />
-    <Content Include="css\fa-font-awesome" />
     <None Include="Properties\PublishProfiles\local box.pubxml" />
     <None Include="Scripts\_references.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -2991,14 +2990,12 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\ExportController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LogoutController.cs" />
     <Compile Include="Controllers\TODTileInfoController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Helpers\pdfExportHelper.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
@@ -3061,6 +3058,7 @@
     <Folder Include="App\core\routes\" />
     <Folder Include="App\core\values\" />
     <Folder Include="bin\" />
+    <Folder Include="Content\fonts\" />
     <Folder Include="Resources\Content\" />
     <Folder Include="Resources\Scripts\" />
     <Folder Include="TalentAnalytics\" />

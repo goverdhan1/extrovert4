@@ -1,3 +1,31 @@
 ﻿<div ng-controller="reviewerConsoleCtrl" class="container">
-
+    <section>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Initiative Name</th>
+                    <th>Employee Name</th>
+                    <th>Email id</th>
+                    <th>Status</th>                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="initiative in initiatives">
+                    <td>
+                        <select ng-model="initiative.type" class="form-control col-sm-2" ng-options="initiativeType for initiativeType in initiativeTypes"></select>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control col-sm-2" ng-model="initiative.name"></input>
+                    </td>
+                    <td>
+                        <input type="number" class="form-control col-sm-2" ng-model="initiative.timeSpent"></input>
+                    </td>
+                    <td>
+                        <input type="number" class="form-control col-sm-2" ng-model="initiative.timeSpent"></input>
+                    </td>  
+                </tr>
+            </tbody>
+        </table>
+        <button class="btn btn-primary" ng-click="addInitiative()">Add Row</button>
+    </section>
 </div>

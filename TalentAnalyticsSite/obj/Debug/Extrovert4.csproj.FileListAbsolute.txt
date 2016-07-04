@@ -92,3 +92,4 @@ C:\Projects\extrovert4\TalentAnalyticsSite\bin\System.Web.WebPages.Deployment.xm
 C:\Projects\extrovert4\TalentAnalyticsSite\bin\System.Web.WebPages.Razor.xml
 C:\Projects\extrovert4\TalentAnalyticsSite\obj\Debug\TalentAnalyticsSite.dll
 C:\Projects\extrovert4\TalentAnalyticsSite\obj\Debug\TalentAnalyticsSite.pdb
+C:\Projects\extrovert4\TalentAnalyticsSite\obj\Debug\Extrovert4.csprojResolveAssemblyReference.cache

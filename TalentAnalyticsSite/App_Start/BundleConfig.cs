@@ -19,10 +19,8 @@ namespace Deloitte.TOD.TalentAnalyticsSite
                  "~/Scripts/jquery-ui-1.10.3.js",
                  "~/Scripts/jquery.dataTables.min.js",
                  "~/Scripts/ui-bootstrap-tpls-0.6.0.js",
-                 "~/Scripts/toaster.min.js",
-                 "~/App/rateThisApp/jquery.ratethisapp.js",
-                 "~/Scripts/FileSaver.js"
-                 
+                 "~/Scripts/toaster.min.js",                 
+                 "~/Scripts/FileSaver.js"  
 
             ));
 
@@ -39,10 +37,10 @@ namespace Deloitte.TOD.TalentAnalyticsSite
             bundles.Add(new StyleBundle("~/bundles/vendorstyles").Include(
                 "~/App/core/styles/bootstrap.min.css"                
             ));
-
             bundles.Add(new StyleBundle("~/bundles/allpageStyles").Include(
              "~/App/header/styles/header.min.css",
-             "~/App/header/styles/top.header.min.css"
+             "~/App/header/styles/top.header.min.css",
+             "~/App/styles/styles.css"
                
          
            ));

@@ -34,23 +34,17 @@
     @Styles.Render("~/bundles/commonStyles")
     @Styles.Render("~/bundles/allpageStyles")
 
-    <link href="//ratethisapp.deloitte.com/rateThisAppService/scripts/latest/_assets/ratethisapp.min.css" rel="stylesheet" />
-    <link href="//ratethisapp.deloitte.com/rateThisAppService/scripts/latest/_assets/ratethisapp-responsive.min.css" rel="stylesheet" />
+   
     @Styles.Render("~/bundles/rateAppStyles")
     <link rel="stylesheet" type="text/css" href="~/App/logout/styles/logoutStyles.css" />
     <link rel="stylesheet" type="text/css" href="~/App/core/styles/print-page-break.min.css" media="print" />
 </head>
-<body>
-   
-    <script src="//ratethisapp.deloitte.com/rateThisAppService/scripts/latest/src/jquery.ratethisapp.js"></script>
+<body>  
 
     <div>
         @RenderBody()
     </div>
     @Scripts.Render("~/bundles/app")
-
-
-
 
 </body>
 </html>

@@ -1,4 +1,4 @@
-<div ng-controller="employeeFormCtrl" class="container">
+<div ng-controller="employeeFormCtrl" class="container empfromback">
     <form name="detailsForm" novalidate class="extrovert-form">
         <div>
             <h4>Personal Details <span class="required-astriek">*</span></h4>
@@ -60,45 +60,50 @@
         </div>
         <br>
         <section>
-            <table class="table">
-                <tr>
-                    <th>Initiative Type</th>
-                    <th>Name Of Initiative</th>
-                    <th>Time Spent</th>
-                    <th>Initiative Lead Name</th>
-                    <th>Initiative Lead Email</th>
-                    <th>Contribution Details</th>
-                    <th>Delete</th>
-                </tr>
-                <tr ng-repeat="initiative in initiatives">
-                    <td>
-                        <select ng-model="initiative.type" ng-options="initiativeType for initiativeType in initiativeTypes"></select>                        
-                    </td>
-                    <td>
-                        <input type="text" ng-model="initiative.name"></input>
-                    </td>
-                    <td>
-                        <input type="number" ng-model="initiative.timeSpent"></input>
-                    </td>
-                    <td>
-                        <input type="text" ng-model="initiative.leadName"></input>
-                    </td>
-                    <td>
-                        <input type="email" ng-model="initiative.leadEmail"></input>
-                    </td>
-                    <td>
-                        <textarea rows="4" cols="50" type="text" ng-model="initiative.contributionDetails"></textarea>
-                    </td>
-                    <td class="text-center">
-                        <p><span class="glyphicon glyphicon-trash delete-span" ng-click="deleteInitiative($index)"></span></p>
-                    </td>
-                </tr>
-            </table>
-            <button ng-click="addInitiative()">Add Row</button>
-        </section>
-        <section class="text-center">
-            <button style="margin-right: 100px">Save</button>
-            <button ng-click="onSubmit()">Submit</button>
+               <table class="table">
+                <thead>
+                    <tr>
+                        <th>Initiative Type</th>
+                        <th>Name Of Initiative</th>
+                        <th>Time Spent</th>
+                        <th>Initiative Lead Name</th>
+                        <th>Initiative Lead Email</th>
+                        <th>Contribution Details</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="initiative in initiatives">
+                        <td>
+                            <select ng-model="initiative.type" class="form-control col-sm-2" ng-options="initiativeType for initiativeType in initiativeTypes"></select>
+                        </td>
+                        <td>
+                            <input type="text" class="form-control col-sm-2" ng-model="initiative.name"></input>
+                        </td>
+                        <td>
+                            <input type="number" class="form-control col-sm-2" ng-model="initiative.timeSpent"></input>
+                        </td>
+                        <td>
+                            <input type="text" class="form-control col-sm-2" ng-model="initiative.leadName"></input>
+                        </td>
+                        <td>
+                            <input type="email" class="form-control col-sm-2" ng-model="initiative.leadEmail"></input>
+                        </td>
+                        <td>
+                         
+                            <textarea class="form-control col-sm-2" ng-model="initiative.contributionDetails" placeholer="Message"></textarea>
+                        </td>
+                        <td class="text-center">
+                            <p><span class="glyphicon glyphicon-trash delete-span" ng-click="deleteInitiative($index)"></span></p>
+                        </td>
+                    </tr>
+                </tbody>
+</table>
+            <button class="btn btn-primary" ng-click="addInitiative()">Add Row</button>
+</section>
+        <section class="text-center savebutton">
+            <button style="margin-right: 20px" class="btn btn-primary btn-lg active">Save</button>
+            <button ng-click="onSubmit()" class="btn btn-secondary btn-lg active" role="button">Submit</button>
         </section>
     </form>
 </div>

@@ -1458,6 +1458,10 @@ header {
 }
 #wrapper {
   min-height: 0px !important;
+  width: 95%;
+  max-width: 1200px;
+  min-width: 980px;
+  margin: 0 auto;
 }
 .dra-cancel-button {
   margin-right: 0px !important;
@@ -1486,3 +1490,4 @@ header {
   /* don't let pointer-events affect descendant elements */
   pointer-events: auto;
 }
+/*# sourceMappingURL=top.header.css.map */

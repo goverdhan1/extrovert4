@@ -260,6 +260,10 @@
     <Content Include="App\header\views\header.pageloading.view.html" />
     <Content Include="App\header\views\header.view.html" />
     <Content Include="App\logout\styles\logoutStyles.css" />
+    <Content Include="App\reviewer-console\controller\reviewerConsoleCtrl.js" />
+    <Content Include="App\reviewer-console\module.js" />
+    <Content Include="App\reviewer-console\services\get-emp-to-review-service.js" />
+    <Content Include="App\reviewer-console\views\reviewerConsole.html" />
     <Content Include="App\reviewer-form\views\reviewerForm.html" />
     <Content Include="App\reviewer-form\controller\reviewFormCtrl.js" />
     <Content Include="App\employee-form\services\emp-form-post-service.js" />
